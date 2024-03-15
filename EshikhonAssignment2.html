@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="Customer Orders.php" method="GET" >
+        <input type="text" placeholder="Please input your name" id="name" name="username"><br><br>
+        <input type="number" placeholder="Order ID" id="order" name="OrderID">
+        <br><br>
+        <label for="gender" id="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select><br><br>
+        <input type="text" placeholder="Country" id="country" name="Country"><br><br>
+        <input type="text" placeholder="Age" id="age" name="Age"><br><br>
+        <input type="text" placeholder="Salary in BDT" id="income" name="income"><br><br>
+        <label for="img">Please upload your passport size photo</label>
+        <input type="file" id="img" name="img"><br><br>
+
+         <input type="submit" value=" Register">
+        
+
+    </form>
+</body>
+</html>
