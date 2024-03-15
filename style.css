@@ -1,0 +1,41 @@
+/* 
+body{background-color: aqua; background-image: url(IMG-20150914-WA0000.jpg);background-repeat: repeat; background-size: auto;}
+h1{color: blueviolet; font-style: italic; text-align: center;background-color: palegoldenrod;}
+p{color: rgb(51, 5, 78); font-size: larger;font: 1em verdana; font-style: normal; font-variant:unset;}
+
+
+.p1{
+    border-style: solid;border-width: 4px; border-color: blue;
+}
+
+.p2{
+    border-color: brown; border-style: dotted; border-width: 10px;
+}
+
+.p3{
+    border-style: groove; border-color: darkblue; border-width: 15px; border-spacing: 20px;
+}
+
+*/
+
+
+.ss{
+    width: 420px;
+    height: 420px;
+    background: aqua;
+    border: 45px gray groove ;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
