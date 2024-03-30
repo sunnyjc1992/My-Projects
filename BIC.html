@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIC Salary Letter Form</title>
+<script>
+function toggleFields() {
+    var embassyType = document.getElementById("embassy_type").checked;
+    var embassyNameLabel = document.getElementById("embassy_name_label");
+    var embassyNameInput = document.getElementById("embassy_name");
+    var companyNameLabel = document.getElementById("company_name_label");
+    var companyNameInput = document.getElementById("company_name");
+    var purposeOfVisitLabel = document.getElementById("purpose_of_visit_label");
+    var travelDateLabel = document.getElementById("travel_date_label");
+    var travelDurationLabel = document.getElementById("travel_duration_label");
+    var purposeOfVisitInput = document.getElementById("purpose_of_visit");
+    var travelDateInput = document.getElementById("travel_date");
+    var travelDurationInput = document.getElementById("travel_duration");
+
+    if (embassyType) {
+        embassyNameLabel.innerText = "Name of the Embassy:";
+        purposeOfVisitLabel.style.display = "block";
+        travelDateLabel.style.display = "block";
+        travelDurationLabel.style.display = "block";
+        embassyNameInput.setAttribute("placeholder", "Enter the name of the embassy");
+        purposeOfVisitInput.style.display = "block";
+        travelDateInput.style.display = "block";
+        travelDurationInput.style.display = "block";
+        companyNameLabel.style.display = "none";
+        companyNameInput.style.display = "none";
+    } else {
+        embassyNameLabel.innerText = "Name of the Organization for Letter:";
+        purposeOfVisitLabel.style.display = "none";
+        travelDateLabel.style.display = "none";
+        travelDurationLabel.style.display = "none";
+        embassyNameInput.setAttribute("placeholder", "Enter the name of the organization");
+        purposeOfVisitInput.style.display = "none";
+        travelDateInput.style.display = "none";
+        travelDurationInput.style.display = "none";
+        companyNameLabel.style.display = "block";
+        companyNameInput.style.display = "block";
+    }
+}
+
+// Call toggleFields() when the page loads to set initial visibility
+window.onload = toggleFields;
+</script>
+</head>
+<body>
+<h1>BIC Salary Letter Form</h1>
+
+<!-- Add your company logo here -->
+<img src="BIC Logo.png" alt="Company Logo" style="max-width: 200px;">
+
+<form action="#" method="post" enctype="multipart/form-data">
+    <label>Employment letter for:</label><br>
+    <input type="radio" id="embassy_type" name="type" value="Embassy" onclick="toggleFields()">
+    <label for="embassy_type">Embassy</label><br>
+    <input type="radio" id="organization_type" name="type" value="Organization" onclick="toggleFields()">
+    <label for="organization_type">Other Organization</label><br><br>
+    
+    <label id="embassy_name_label" for="embassy_name">Name of the Embassy:</label><br>
+    <input type="text" id="embassy_name" name="embassy_name" placeholder="Enter the name of the embassy"><br>
+    
+    <label id="purpose_of_visit_label" for="purpose_of_visit">Purpose of Visit (Business/Leisure):</label><br>
+    <input type="text" id="purpose_of_visit" name="purpose_of_visit"><br>
+    
+    <label id="travel_date_label" for="travel_date">Date of travel:</label><br>
+    <input type="date" id="travel_date" name="travel_date"><br>
+    
+    <label id="travel_duration_label" for="travel_duration">Duration of travel:</label><br>
+    <input type="text" id="travel_duration" name="travel_duration"><br>
+    
+    <label for="passport_copy">Please attach your passport copy along this form:</label><br>
+    <input type="file" id="passport_copy" name="passport_copy"><br><br>
+
+    <label for="name_in_letter">Your Name (to be mentioned in letter):</label><br>
+    <input type="text" id="name_in_letter" name="name_in_letter"><br>
+    
+    <label for="passport_number">Passport number:</label><br>
+    <input type="text" id="passport_number" name="passport_number"><br>
+    
+    <label for="passport_expiry">Passport Expiry date:</label><br>
+    <input type="date" id="passport_expiry" name="passport_expiry"><br>
+    
+    <label for="saudi_id">Saudi ID/Iqama no.:</label><br>
+    <input type="text" id="saudi_id" name="saudi_id"><br>
+
+    <label id="company_name_label" for="company_name"> Name of the Organization you are employed with:</label><br>
+    <input type="text" id="company_name" name="company_name"><br>
+    
+    <label for="date_of_joining">Date of Joining to your company:</label><br>
+    <input type="date" id="date_of_joining" name="date_of_joining"><br>
+    
+    <label for="position">Position in company/Iqama Job title:</label><br>
+    <input type="text" id="position" name="position"><br>
+    
+    <label for="salary">Salary:</label><br>
+    <input type="text" id="salary" name="salary"><br>
+    
+    <label for="basic_salary">Basic:</label><br>
+    <input type="text" id="basic_salary" name="basic_salary"><br>
+    
+    <label for="housing_allowance">Housing:</label><br>
+    <input type="text" id="housing_allowance" name="housing_allowance"><br>
+    
+    <label for="transportation_allowance">Transportation:</label><br>
+    <input type="text" id="transportation_allowance" name="transportation_allowance"><br><br>
+    
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
